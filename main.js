@@ -10,7 +10,7 @@ let playerSelection = prompt("Rock-Paper-Scissors").toLowerCase();
 
 
 function singleGame(playerSelection, computerSelection){
-    if(playerSelection != 'rock' || 'paper' || 'scissors'){
+    if(playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissor'){
         console.log("WTF is that");
     }
     else if(playerSelection === computerSelection){

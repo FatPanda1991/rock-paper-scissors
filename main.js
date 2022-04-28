@@ -16,18 +16,23 @@ let computerScore = 0;
 
 function singleGame(playerSelection, computerSelection){
     if(playerSelection === computerSelection){
+        console.log("draw");
         return draw;
     }
     else if(playerSelection === 'rock' && computerSelection === 'scissors'){
+        console.log(`You win ${playerSelection} beats ${computerSelection}`);
         return ++playerScore;
     }
     else if(playerSelection === 'paper' && computerSelection === 'rock'){
+        console.log(`You win ${playerSelection} beats ${computerSelection}`);
         return ++playerScore;
     }
     else if(playerSelection === 'scissors' && computerSelection === 'paper'){
+        console.log(`You win ${playerSelection} beats ${computerSelection}`);
         return ++playerScore;
     }
     else{
+        console.log(`You lost ${computerSelection} beats ${playerSelection}`);
         return ++computerScore;
     }
 }
@@ -37,7 +42,7 @@ function game() {
     for (i = 0; i < 5; i++){
         playerSelection = prompt("Rock-Paper-Scissors").toLowerCase();
         singleGame(playerSelection, computerPlay());
-        if(playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissor'){
+        if(playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors'){
             i = i - 1;
         }
     }

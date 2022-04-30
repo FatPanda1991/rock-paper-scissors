@@ -20,19 +20,19 @@ function singleGame(playerSelection, computerSelection){
         return draw;
     }
     else if(playerSelection === 'rock' && computerSelection === 'scissors'){
-        console.log(`You win ${playerSelection} beats ${computerSelection}`);
+        document.getElementById("score").innerHTML =`You win ${playerSelection} beats ${computerSelection}`;
         return ++playerScore;
     }
     else if(playerSelection === 'paper' && computerSelection === 'rock'){
-        console.log(`You win ${playerSelection} beats ${computerSelection}`);
+        document.getElementById("score").innerHTML =`You win ${playerSelection} beats ${computerSelection}`;
         return ++playerScore;
     }
     else if(playerSelection === 'scissors' && computerSelection === 'paper'){
-        console.log(`You win ${playerSelection} beats ${computerSelection}`);
+        document.getElementById("score").innerHTML =`You win ${playerSelection} beats ${computerSelection}`;
         return ++playerScore;
     }
     else{
-        console.log(`You lost ${computerSelection} beats ${playerSelection}`);
+        document.getElementById("score").innerHTML =`You lost ${computerSelection} beats ${playerSelection}`;
         return ++computerScore;
     }
 }
@@ -40,21 +40,23 @@ function singleGame(playerSelection, computerSelection){
 function game() {
 
     for (i = 0; i < 5; i++){
-        playerSelection = prompt("Rock-Paper-Scissors").toLowerCase();
-        singleGame(playerSelection, computerPlay());
-        if(playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors'){
+        playerSelection = prompt("Rock-Paper-Scissors").toLowerCase(); //Insert player choice and make it lowercase
+        if(playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors'){ //Check if it is correct
             i = i - 1;
+            console.log(`What is ${playerSelection}`);
+        }
+        else {singleGame(playerSelection, computerPlay()); //If correct play single game
         }
     }
         
-    if(playerScore > computerScore) {
-        console.log('win');
+    if(playerScore > computerScore) { //count scores and declare winner
+        document.getElementById("result").innerHTML = `You won with ${playerScore} points against computer with ${computerScore} points`;
     }
     else if(playerScore < computerScore){
-        console.log('loser');
+        document.getElementById("result").innerHTML = `You lost with ${playerScore} points against computer with ${computerScore} points`;
     }
     else{
-        console.log('draw')
+        document.getElementById("result").innerHTML = `It is draw. You both have ${playerScore} points`;
     }
 }
-console.log(game());
+

@@ -5,14 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
+    <style> 
+    #reset {
+        style: none;
+        display: none;
+    }
+    </style>
 </head>
 <body>
     <script src="main.js"></script>
 
-    <button onclick="game()">Game</button>
+    <button id="btn-1" onClick="game('rock')">Rock</button>
+    <button id="btn-2" onClick="game('paper')">Paper</button>
+    <button id="btn-3" onClick="game('scissors')">Scissors</button>
+    <br>
+
 
     <p id="score"></p>
     <p id="result"></p>
+    <p id="outcome"></p>
+
+    <button id="reset" onClick="resetGame()">Reset</button> 
 
 
 

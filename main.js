@@ -72,7 +72,7 @@ function resetGame() {
 }
 
 
-function game8(playerSelection) {
+function gameInf(playerSelection) {
     
     const computerChoices = ['Rock', 'Paper', 'Scissors'];
     const computerSelection = computerPlay();

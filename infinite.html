@@ -5,27 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap" rel="stylesheet">
 </head>
 <body>
     <script src="main.js"></script>
-
+    <div class="container">
     <h1>Infinite</h1>
     
-    <button id="btn-1" onClick="gameInf('Rock')">Rock</button>
-    <button id="btn-2" onClick="gameInf('Paper')">Paper</button>
-    <button id="btn-3" onClick="gameInf('Scissors')">Scissors</button>
-    <br>
+    <div class="choices">
+       <button id="btn-1" onClick="gameInf('Rock')">Rock</button>
+       <button id="btn-2" onClick="gameInf('Paper')">Paper</button>
+       <button id="btn-3" onClick="gameInf('Scissors')">Scissors</button>
+    </div>
 
+    <div class="score">
+        <p id="score"></p>
+        <p id="result"></p>
+        <p id="outcome"></p>
+    </div>  
 
-    <p id="score"></p>
-    <p id="result"></p>
-    <p id="outcome"></p>
+    <div class="endButtons">
+        <button id="reset" onClick="resetGame()">Reset</button> 
+        <br>
+        <a href="index.html">
+           <button>Return</button> 
+        </a>
+    </div>  
 
-    <button id="reset" onClick="resetGame()">Reset</button> 
-    <br>
-    <a href="index.html">
-        <button>Return</button> 
-    </a>
+    </div>
 
 </body>
 </html>

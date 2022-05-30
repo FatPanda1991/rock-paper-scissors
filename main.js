@@ -3,40 +3,51 @@ let computerScore = 0;
 let resetButton;
 
 function game(playerSelection) {
-    
+    document.getElementById(`Rock`).style.boxShadow = null;
+    document.getElementById(`Paper`).style.boxShadow = null;
+    document.getElementById(`Scissors`).style.boxShadow = null;
     const computerChoices = ['Rock', 'Paper', 'Scissors'];
     const computerSelection = computerPlay();
 
     function computerPlay(){
-    let result = computerChoices[Math.floor(Math.random()*computerChoices.length)];
-    return result;
+        let result = computerChoices[Math.floor(Math.random()*computerChoices.length)];
+        document.getElementById(`${result}`).style.boxShadow = "0px 0px 12px 4px rgb(219, 62, 22)";
+        return result;
     }
     if(playerSelection === computerSelection){
-    document.getElementById("result").innerHTML = "Draw";
+        document.getElementById("result").innerHTML = "Draw";
     }
     else if(playerSelection === 'Rock' && computerSelection === 'Scissors'){
-    document.getElementById("result").innerHTML = `You win ${playerSelection} beats ${computerSelection}`;
-    ++playerScore;
-    document.getElementById("score").innerHTML = `Your score is ${playerScore} <br> Computer score is ${computerScore}`
-    checkScore()
+        document.getElementById("result").innerHTML = `You win ${playerSelection} 
+             beats ${computerSelection}`;
+        ++playerScore;
+        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
+            <br> Computer score is ${computerScore}`
+        checkScore()
     }
     else if(playerSelection === 'Paper' && computerSelection === 'Rock'){
-    document.getElementById("result").innerHTML = `You win ${playerSelection} beats ${computerSelection}`;
-    ++playerScore;
-    document.getElementById("score").innerHTML = `Your score is ${playerScore} <br> Computer score is ${computerScore}`
-    checkScore()
+        document.getElementById("result").innerHTML = `You win ${playerSelection} 
+            beats ${computerSelection}`;
+        ++playerScore;
+        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
+            <br> Computer score is ${computerScore}`
+        checkScore()
     }
     else if(playerSelection === 'Scissors' && computerSelection === 'Paper'){
-    document.getElementById("result").innerHTML = `You win ${playerSelection} beats ${computerSelection}`;
-    ++playerScore;
-    document.getElementById("score").innerHTML = `Your score is ${playerScore} <br> Computer score is ${computerScore}`
-    checkScore()
+        document.getElementById("result").innerHTML = `You win ${playerSelection} 
+            beats ${computerSelection}`;
+        ++playerScore;
+        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
+            <br> Computer score is ${computerScore}`
+        checkScore()
     }
     else{
-    document.getElementById("result").innerHTML = `You lost ${computerSelection} beats ${playerSelection}`;
-    ++computerScore;
-    document.getElementById("score").innerHTML = `Your score is ${playerScore} <br> Computer score is ${computerScore}`
-    checkScore()
+        document.getElementById("result").innerHTML = `You lost ${computerSelection} 
+            beats ${playerSelection}`;
+        ++computerScore;
+        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
+            <br> Computer score is ${computerScore}`
+        checkScore()
     }
 }
 
@@ -62,12 +73,16 @@ function gameOver(){
 }
 
 function resetGame() {
+    document.getElementById(`Rock`).style.boxShadow = null;
+    document.getElementById(`Paper`).style.boxShadow = null;
+    document.getElementById(`Scissors`).style.boxShadow = null;
     document.getElementById("btn-1").disabled = false;
     document.getElementById("btn-2").disabled = false;
     document.getElementById("btn-3").disabled = false;
     playerScore = 0;
     computerScore = 0;
-    document.getElementById("score").innerHTML = `Your score is ${playerScore} <br> Computer score is ${computerScore}`
+    document.getElementById("score").innerHTML = `Your score is ${playerScore} 
+        <br> Computer score is ${computerScore}`
     document.getElementById("reset").style.display="none"
 }
 
@@ -78,31 +93,39 @@ function gameInf(playerSelection) {
     const computerSelection = computerPlay();
 
     function computerPlay(){
-    let result = computerChoices[Math.floor(Math.random()*computerChoices.length)];
-    return result;
+        let result = computerChoices[Math.floor(Math.random()*computerChoices.length)];
+            return result;
     }
     if(playerSelection === computerSelection){
-    document.getElementById("result").innerHTML = "Draw";
+        document.getElementById("result").innerHTML = "Draw";
     }
     else if(playerSelection === 'Rock' && computerSelection === 'Scissors'){
-    document.getElementById("result").innerHTML = `You win ${playerSelection} beats ${computerSelection}`;
-    ++playerScore;
-    document.getElementById("score").innerHTML = `Your score is ${playerScore} <br> Computer score is ${computerScore}`
+        document.getElementById("result").innerHTML = `You win ${playerSelection} 
+            beats ${computerSelection}`;
+        ++playerScore;
+        document.getElementById("score").innerHTML = `Your score is ${playerScore}
+             <br> Computer score is ${computerScore}`
     }
     else if(playerSelection === 'Paper' && computerSelection === 'Rock'){
-    document.getElementById("result").innerHTML = `You win ${playerSelection} beats ${computerSelection}`;
-    ++playerScore;
-    document.getElementById("score").innerHTML = `Your score is ${playerScore} <br> Computer score is ${computerScore}`
+        document.getElementById("result").innerHTML = `You win ${playerSelection} 
+            beats ${computerSelection}`;
+        ++playerScore;
+        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
+            <br> Computer score is ${computerScore}`
     }
     else if(playerSelection === 'Scissors' && computerSelection === 'Paper'){
-    document.getElementById("result").innerHTML = `You win ${playerSelection} beats ${computerSelection}`;
-    ++playerScore;
-    document.getElementById("score").innerHTML = `Your score is ${playerScore} <br> Computer score is ${computerScore}`
+        document.getElementById("result").innerHTML = `You win ${playerSelection} 
+            beats ${computerSelection}`;
+        ++playerScore;
+        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
+            <br> Computer score is ${computerScore}`
     }
     else{
-    document.getElementById("result").innerHTML = `You lost ${computerSelection} beats ${playerSelection}`;
-    ++computerScore;
-    document.getElementById("score").innerHTML = `Your score is ${playerScore} <br> Computer score is ${computerScore}`
+        document.getElementById("result").innerHTML = `You lost ${computerSelection} 
+            beats ${playerSelection}`;
+        ++computerScore;
+        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
+            <br> Computer score is ${computerScore}`
     }
 }
 

@@ -102,41 +102,39 @@ function gameInf(playerSelection) {
 
     function computerPlay(){
         let result = computerChoices[Math.floor(Math.random()*computerChoices.length)];
-        document.getElementById(`${result}`).style.boxShadow = "0px 0px 12px 4px rgb(212, 0, 0);";
+        document.getElementById(`${result}`).style.boxShadow = "0px 0px 12px 4px rgb(212, 0, 0)";
             return result;
     }
     if(playerSelection === computerSelection){
-        document.getElementById("result").innerHTML = "Draw";
-        document.getElementById("score").innerHTML = `Your score is ${playerScore}
-             <br> Computer score is ${computerScore}`
+        document.getElementById("result").innerHTML += "<br>Draw<br>";
     }
     else if(playerSelection === 'Rock' && computerSelection === 'Scissors'){
-        document.getElementById("result").innerHTML = `You win ${playerSelection} 
-            beats ${computerSelection}`;
-        ++playerScore;
-        document.getElementById("score").innerHTML = `Your score is ${playerScore}
-             <br> Computer score is ${computerScore}`
+        document.getElementById("result").innerHTML += `<br>You win ${playerSelection} 
+        beats ${computerSelection}<br>`;
+         ++playerScore;
+         document.getElementById("compScore").innerHTML = `${computerScore}`;
+         document.getElementById("plrScore").innerHTML = `${playerScore}`;
     }
     else if(playerSelection === 'Paper' && computerSelection === 'Rock'){
-        document.getElementById("result").innerHTML = `You win ${playerSelection} 
-            beats ${computerSelection}`;
+        document.getElementById("result").innerHTML += `<br>You win ${playerSelection} 
+             beats ${computerSelection}<br>`;
         ++playerScore;
-        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
-            <br> Computer score is ${computerScore}`
+        document.getElementById("compScore").innerHTML = `${computerScore}`;
+        document.getElementById("plrScore").innerHTML = `${playerScore}`;
     }
     else if(playerSelection === 'Scissors' && computerSelection === 'Paper'){
-        document.getElementById("result").innerHTML = `You win ${playerSelection} 
-            beats ${computerSelection}`;
+        document.getElementById("result").innerHTML += `<br>You win ${playerSelection} 
+             beats ${computerSelection}<br>`;
         ++playerScore;
-        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
-            <br> Computer score is ${computerScore}`
+        document.getElementById("compScore").innerHTML = `${computerScore}`;
+        document.getElementById("plrScore").innerHTML = `${playerScore}`;
     }
     else{
-        document.getElementById("result").innerHTML = `You lost ${computerSelection} 
-            beats ${playerSelection}`;
+        document.getElementById("result").innerHTML += `<br>You lost ${computerSelection} 
+            beats ${playerSelection}<br>`;
         ++computerScore;
-        document.getElementById("score").innerHTML = `Your score is ${playerScore} 
-            <br> Computer score is ${computerScore}`
+        document.getElementById("compScore").innerHTML = `${computerScore}`;
+        document.getElementById("plrScore").innerHTML = `${playerScore}`;
     }
 }
 

@@ -87,20 +87,21 @@ h3 {
     flex-direction: column-reverse;
     padding-bottom: 75px;
     padding-left: 80px;
+    background-color: rgb(165, 42, 42, 0.5);
 }
 
 .computerChoices button{
-    box-shadow: 0px 0px 12px 4px rgb(179, 14, 50);
+    box-shadow: 0px 0px 12px 4px rgb(99, 25, 25);
     margin-bottom: 20px;
 }
 
 .playerChoices button{
-    box-shadow: 0px 0px 12px 4px rgb(12, 66, 167);
+    box-shadow: 0px 0px 12px 4px rgb(20, 44, 87);
 }
 
 .win{
     font-size: 60px;
-    color: rgb(23, 216, 32);
+    color: rgb(0, 253, 13);
     text-transform: uppercase;
     padding: 0;
     height: 175px;
@@ -112,7 +113,7 @@ h3 {
 
 .lose {
     font-size: 60px;
-    color: rgb(216, 23, 23);
+    color: rgb(255, 0, 0);
     text-transform: uppercase;
     padding: 0;
     height: 175px;
@@ -120,8 +121,18 @@ h3 {
     align-items: center;
     justify-content: center; 
     font-weight: 800;
-
 }
+
+.playerChoices button:hover{
+    box-shadow: 0px 0px 12px 4px rgb(44, 188, 231);
+    transition: all 0.5s ease-in-out;
+}
+
+button:hover{
+    box-shadow: 0px 0px 12px 4px rgb(161, 192, 197);
+    transition: all 0.5s ease-in-out;
+}
+
 
 
 

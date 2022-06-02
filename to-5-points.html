@@ -18,22 +18,21 @@
 </head>
 <body>
     <script src="main.js"></script>
+    <div class="container">
     <h1>Up-To-5-Points</h1>
 
-    <h2>Computer</h2>
+    <h2 class="computer">Computer</h2>
+    <h3>Score: <span id="compScore">0</span></h3>
     <div class="computerChoices">
     <button id = "Rock">Rock</button>
     <button id = "Paper">Paper</button>
     <button id = "Scissors">Scissors</button>
     </div>
     <br>
-    <div class="scores">
-    <p id="score"></p>
-    <p id="result"></p>
-    <p id="outcome"></p>
-    </div>
+    <div class="result" id="result"></div>
     <br>
-    <h2>Player</h2>
+    <h2 class="player">Player</h2>
+    <h3>Score: <span id="plrScore">0</span></h3>
     <div class="playerChoices">
     <button id="btn-1" onClick="game('Rock')">Rock</button>
     <button id="btn-2" onClick="game('Paper')">Paper</button>
@@ -47,6 +46,7 @@
     <a href="index.html">
         <button>Return</button> 
     </a>
+    </div>
 
 </body>
 </html>
